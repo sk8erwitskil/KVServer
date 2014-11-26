@@ -1,3 +1,4 @@
+### KVserver ###
 An HTTP server for reading and storing simple values.
 Each item will be stored in a list so you can add multiple items to the same key as well as remove just single items from a key list.
 
@@ -8,8 +9,8 @@ The server is started using TornRPC (https://github.com/sk8erwitskil/TornRPC) bu
 curl -H "User-Agent: TornRPC" -X GET -d "key=kyle" http://my_ip.address.com:80/get
 curl -H "User-Agent: TornRPC" -X GET -d "key=kyle&val=owner" http://my_ip.address.com:80/add
 ```
-The response will be a JSON object like ```{"response": ["owner"]}```. The value here is to not require needing a redis library to interact with the server.
-
+The response will be a JSON object like ```{"response": ["owner"]}```.
+The benefit of this is not requiring any extra libraries to talk to the server.
 
 ### Dependencies ###
 - tornado
