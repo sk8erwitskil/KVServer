@@ -23,7 +23,7 @@ python server.py --port=80 --redis=127.0.0.1:6379
 ```
 
 Then in a different location simply
-```
+```python
 from tornrpc.client import TornRPCClient
 client = TornRPCClient("my_ip.address.com:80")
 print client.add("github", "https://github.com/sk8erwitskil")
